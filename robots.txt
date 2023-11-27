@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /js/
+Disallow: /lib/
+Disallow: /.env/
+Disallow: /blog.html/
+Disallow: /scss/
