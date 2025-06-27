@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Zhao - Product Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 py-12">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="flex justify-center">
+                    <!-- Hero Image -->
+                    <img src="me.jpg" alt="William Zhao" class="w-96 h-96 object-cover rounded-sm">
+                </div>
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light mb-8 leading-tight text-black whitespace-nowrap">
+                        William Zhao
+                    </h1>
+                    <p class="text-3xl font-light mb-10 text-gray-800 max-w-lg">
+                        I build products that help people get hired.
+                    </p>
+                    <p class="text-lg text-gray-500 mb-12 max-w-lg leading-relaxed">
+                        Currently applying to study in Singapore. Looking to scale smarter, connect with sharp people, and build globally.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <a href="#work" class="text-black border-b border-black pb-2 hover:text-gray-600 transition-colors text-lg font-medium">
+                            View Work
+                        </a>
+                        <a href="#resume" class="text-black border-b border-black pb-2 hover:text-gray-600 transition-colors text-lg font-medium">
+                            Resume
+                        </a>
+                        <a href="#contact" class="text-black border-b border-black pb-2 hover:text-gray-600 transition-colors text-lg font-medium">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Startups Section -->
+    <section id="work" class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-5xl font-light mb-16 text-black">Work</h2>
+            
+
+
+            <!-- ResuEdge -->
+            <div class="mb-20 border-b border-gray-200 pb-12">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="resuedge_half_logo.png" alt="ResuEdge Logo" class="w-12 h-12 rounded object-cover">
+                            <h3 class="text-4xl font-light text-black">ResuEdge</h3>
+                        </div>
+                        <p class="text-lg text-gray-600 mb-4">AI resume builder</p>
+                        <p class="text-sm text-gray-400 mb-8">Founded 2025</p>
+                        <div class="space-y-2 text-sm text-gray-500 mb-8">
+                            <p><span class="bg-black text-white px-2 py-1 rounded font-medium text-xs uppercase tracking-wide">15,000+ users</span></p>
+                            <p><span class="bg-black text-white px-2 py-1 rounded font-medium text-xs uppercase tracking-wide">$5K MRR+</span></p>
+                            <p><span class="bg-black text-white px-2 py-1 rounded font-medium text-xs uppercase tracking-wide">70M+ views</span></p>
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-sm text-gray-500 uppercase tracking-wide">Social</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="https://www.tiktok.com/@resuedge" target="_blank" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 256 256"><path d="M224,68a44.05,44.05,0,0,1-44-44,12,12,0,0,0-12-12H128a12,12,0,0,0-12,12V156a16,16,0,1,1-22.85-14.47A12,12,0,0,0,100,130.69V88A12,12,0,0,0,85.9,76.19a79.35,79.35,0,0,0-47.08,27.74A81.84,81.84,0,0,0,20,156a80,80,0,0,0,160,0V122.67A107.47,107.47,0,0,0,224,132a12,12,0,0,0,12-12V80A12,12,0,0,0,224,68Zm-12,39.15a83.05,83.05,0,0,1-37-14.91A12,12,0,0,0,156,102v54a56,56,0,0,1-112,0,57.86,57.86,0,0,1,32-51.56V124a40,40,0,1,0,64,32V36h17.06A68.21,68.21,0,0,0,212,90.94Z"></path></svg>
+                                    TikTok
+                                </a>
+                                <a href="https://www.instagram.com/resuedge.resumes/" target="_blank" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                                    Instagram
+                                </a>
+                                <a href="https://www.facebook.com/profile.php?id=100052382077871" target="_blank" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                    <i data-lucide="facebook" class="w-4 h-4"></i>
+                                    Facebook
+                                </a>
+                                <a href="https://www.youtube.com/@resuedge" target="_blank" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                    <i data-lucide="youtube" class="w-4 h-4"></i>
+                                    YouTube
+                                </a>
+                                <a href="https://www.threads.com/@resuedge" target="_blank" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 256 256"><path d="M188.84,120.46a68.14,68.14,0,0,0-10-6.23c-3.72-21.68-16.41-37.41-35.52-43.2C121.94,64.55,97.29,72.42,86,89.34a12,12,0,0,0,20,13.32c5.47-8.2,19.11-12.08,30.41-8.66a24.72,24.72,0,0,1,14.88,12.24,86.73,86.73,0,0,0-8.86-.45C108.56,105.79,84,125.22,84,152c0,22.9,17.54,39.52,41.71,39.52a52,52,0,0,0,37.23-16c6-6.23,12.88-16.46,15.72-32.07,6.2,6.42,9.34,14.67,9.34,24.59,0,17.74-19.07,44-60,44-45.76,0-68-27.48-68-84s22.24-84,68-84c31.08,0,51,12.42,60.8,38a12,12,0,0,0,22.4-8.62C197.77,38.44,169,20,128,20,68.67,20,36,58.35,36,128s32.67,108,92,108c31.36,0,51.08-12.05,62.11-22.15C203.81,201.28,212,184.14,212,168,212,148.36,204,131.92,188.84,120.46Zm-43.2,38.39a27.9,27.9,0,0,1-19.93,8.67c-8.17,0-17.71-4.06-17.71-15.52,0-15.26,17.84-22.21,34.41-22.21a60.23,60.23,0,0,1,13.51,1.52C155.36,142.93,151.84,152.41,145.64,158.85Z"></path></svg>
+                                    Threads
+                                </a>
+                                <a href="https://www.linkedin.com/company/104411866/admin/dashboard/" target="_blank" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                                    LinkedIn
+                                </a>
+                                <a href="https://ucsc.joinhandshake.com/profiles/50687134" target="_blank" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                    <img src="file.svg" alt="Handshake" class="w-4 h-4">
+                                    Handshake
+                                </a>
+                                <a href="https://x.com/EdgeResu63597" target="_blank" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 256 256"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path></svg>
+                                    X (Twitter)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                            Built an AI-powered resume optimization tool. Uses machine learning to analyze and improve resumes based on job descriptions and ATS requirements. Viral growth through social media.
+                        </p>
+                        <div class="relative">
+                            <!-- Carousel Container -->
+                            <div class="carousel-container overflow-hidden rounded-lg" data-carousel="resuedge">
+                                <div class="carousel-track flex transition-transform duration-300 ease-in-out">
+                                    <div class="carousel-slide w-full flex-shrink-0">
+                                        <video 
+                                            class="w-full h-96 object-cover" 
+                                            autoplay 
+                                            muted 
+                                            loop 
+                                            
+                                            poster="https://ik.imagekit.io/lru6xq87x/resuedge_landing-prod.mp4/ik-thumbnail.jpg?updatedAt=1750997168967">
+                                            <source src="https://ik.imagekit.io/lru6xq87x/resuedge_landing-prod.mp4?updatedAt=1750997168967" type="video/mp4">
+                                            <div class="bg-gray-100 h-96 flex items-center justify-center text-gray-400 text-sm">
+                                                [Video not supported - ResuEdge Demo]
+                                            </div>
+                                        </video>
+                                    </div>
+                                    <div class="carousel-slide w-full flex-shrink-0">
+                                        <img src="work_logos/resuedge-landing.png" alt="ResuEdge Landing Page" class="w-full h-96 object-cover">
+                                    </div>
+                                    <div class="carousel-slide w-full flex-shrink-0">
+                                        <img src="work_logos/resuedge-analytics.png" alt="Resuedge Analytics" class="w-full h-96 object-cover">
+                                    </div>
+                                </div>
+                                <!-- Navigation Buttons -->
+                                <button class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-200">
+                                    <i data-lucide="chevron-left" class="w-5 h-5 text-gray-700"></i>
+                                </button>
+                                <button class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all duration-200">
+                                    <i data-lucide="chevron-right" class="w-5 h-5 text-gray-700"></i>
+                                </button>
+                            </div>
+                            <!-- Step Indicators -->
+                            <div class="flex justify-center space-x-2 mt-4">
+                                <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors active" data-slide="0"></button>
+                                <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors" data-slide="1"></button>
+                                <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors" data-slide="2"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Pitchcard -->
+                        <div class="mb-20 border-b border-gray-200 pb-12">
+                            <div class="grid md:grid-cols-3 gap-12">
+                                <div>
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <img src="pitchcard_logo.png" alt="Pitchcard Logo" class="w-16 h-16 rounded object-cover">
+                                        <h3 class="text-4xl font-light text-black">Pitchcard</h3>
+                                    </div>
+                                    <p class="text-lg text-gray-600 mb-4">No-code site builder for job seekers</p>
+                                    <p class="text-sm text-gray-400 mb-8">Founded 2025</p>
+                                    <div class="space-y-2 text-sm text-gray-500 mb-8">
+                                        <p><span class="bg-black text-white px-2 py-1 rounded font-medium text-xs uppercase tracking-wide">In development</span></p>
+                                        <p><span class="bg-black text-white px-2 py-1 rounded font-medium text-xs uppercase tracking-wide">$30K backing</span></p>
+                                        <p><a href="https://www.coryzue.com/" target="_blank" class="text-black hover:text-gray-600 transition-colors border-b border-gray-300 hover:border-gray-500 inline-flex items-center gap-1">Cory Zue <i data-lucide="external-link" class="w-3 h-3"></i></a> (advisor)</p>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <h4 class="text-sm text-gray-500 uppercase tracking-wide">Social</h4>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <a href="#" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 256 256"><path d="M224,68a44.05,44.05,0,0,1-44-44,12,12,0,0,0-12-12H128a12,12,0,0,0-12,12V156a16,16,0,1,1-22.85-14.47A12,12,0,0,0,100,130.69V88A12,12,0,0,0,85.9,76.19a79.35,79.35,0,0,0-47.08,27.74A81.84,81.84,0,0,0,20,156a80,80,0,0,0,160,0V122.67A107.47,107.47,0,0,0,224,132a12,12,0,0,0,12-12V80A12,12,0,0,0,224,68Zm-12,39.15a83.05,83.05,0,0,1-37-14.91A12,12,0,0,0,156,102v54a56,56,0,0,1-112,0,57.86,57.86,0,0,1,32-51.56V124a40,40,0,1,0,64,32V36h17.06A68.21,68.21,0,0,0,212,90.94Z"></path></svg>
+                                                TikTok
+                                            </a>
+                                            <a href="#" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                                <i data-lucide="instagram" class="w-4 h-4"></i>
+                                                Instagram
+                                            </a>
+                                            <a href="#" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                                <i data-lucide="facebook" class="w-4 h-4"></i>
+                                                Facebook
+                                            </a>
+                                            <a href="#" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                                <i data-lucide="youtube" class="w-4 h-4"></i>
+                                                YouTube
+                                            </a>
+                                            <a href="#" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 256 256"><path d="M188.84,120.46a68.14,68.14,0,0,0-10-6.23c-3.72-21.68-16.41-37.41-35.52-43.2C121.94,64.55,97.29,72.42,86,89.34a12,12,0,0,0,20,13.32c5.47-8.2,19.11-12.08,30.41-8.66a24.72,24.72,0,0,1,14.88,12.24,86.73,86.73,0,0,0-8.86-.45C108.56,105.79,84,125.22,84,152c0,22.9,17.54,39.52,41.71,39.52a52,52,0,0,0,37.23-16c6-6.23,12.88-16.46,15.72-32.07,6.2,6.42,9.34,14.67,9.34,24.59,0,17.74-19.07,44-60,44-45.76,0-68-27.48-68-84s22.24-84,68-84c31.08,0,51,12.42,60.8,38a12,12,0,0,0,22.4-8.62C197.77,38.44,169,20,128,20,68.67,20,36,58.35,36,128s32.67,108,92,108c31.36,0,51.08-12.05,62.11-22.15C203.81,201.28,212,184.14,212,168,212,148.36,204,131.92,188.84,120.46Zm-43.2,38.39a27.9,27.9,0,0,1-19.93,8.67c-8.17,0-17.71-4.06-17.71-15.52,0-15.26,17.84-22.21,34.41-22.21a60.23,60.23,0,0,1,13.51,1.52C155.36,142.93,151.84,152.41,145.64,158.85Z"></path></svg>
+                                                Threads
+                                            </a>
+                                            <a href="#" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                                                LinkedIn
+                                            </a>
+                                            <a href="#" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                                <img src="file.svg" alt="Handshake" class="w-4 h-4">
+                                                Handshake
+                                            </a>
+                                            <a href="#" class="flex items-center gap-2 text-sm text-black hover:text-gray-600 transition-colors">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 256 256"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path></svg>
+                                                X (Twitter)
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                                        Creating a drag-and-drop platform for job seekers to build professional portfolio websites. Intersection of personal branding and job search optimization.
+                                    </p>
+                                    <div class="relative">
+                                        <!-- Carousel Container -->
+                                        <div class="carousel-container overflow-hidden rounded-lg" data-carousel="pitchcard">
+                                            <div class="carousel-track flex transition-transform duration-300 ease-in-out">
+                                                <div class="carousel-slide w-full flex-shrink-0">
+                                                    <img src="work_logos/pitchcard-landing.png" class="" alt="pitchcard-landing">
+                                                </div>
+              
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="py-12 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-5xl font-light mb-16 text-black">Experience</h2>
+            
+            <div class="space-y-12">
+                <!-- SEO Analyst & Specialist -->
+                <div class="grid md:grid-cols-4 gap-8 border-b border-gray-200 pb-10">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="experience_logos/pumpx-logo.png" alt="PumpX Logo" class="w-8 h-8 rounded object-cover">
+                            <div class="text-sm text-gray-400">PumpX Fitness LLC</div>
+                        </div>
+                        <div class="text-sm text-gray-500">SEO Analyst & Specialist</div>
+                        <div class="text-sm text-gray-400">Nov 2023 – Present</div>
+                    </div>
+                    <div class="md:col-span-3">
+                        <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+                            <p><span class="bg-yellow-200 px-1 rounded">920% surge</span> in app downloads in first quarter by analyzing SEO KPIs and optimizing strategies (10 to ~95/month)</p>
+                            <p><span class="bg-yellow-200 px-1 rounded">1882% increase</span> in organic traffic through keyword-optimized content creation (<span class="bg-yellow-200 px-1 rounded">30 to ~2000 daily visitors</span>)</p>
+                            <p><span class="bg-yellow-200 px-1 rounded">212% increase</span> in quality backlinks monthly via guest posting & outreach strategies</p>
+                            <p>Achieved 3-second reduction in loading time for main website and 50+ subpages</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Associate -->
+                <div class="grid md:grid-cols-4 gap-8 border-b border-gray-200 pb-10">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="experience_logos/camginc.jpg" alt="CAMG Logo" class="w-8 h-8 rounded object-cover">
+                            <div class="text-sm text-gray-400">CAMG, Inc. (Consumer Attorney Marketing Group)</div>
+                        </div>
+                        <div class="text-sm text-gray-500">SEO Associate</div>
+                        <div class="text-sm text-gray-400">Sep 2023 – Present</div>
+                    </div>
+                    <div class="md:col-span-3">
+                        <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+                            <p>Supported <span class="bg-yellow-200 px-1 rounded">17 client accounts</span> at the <span class="bg-yellow-200 px-1 rounded">U.S.'s largest legal SEO agency</span>, specializing in attorney marketing</p>
+                            <p>Drove <span class="bg-yellow-200 px-1 rounded">500+ backlinks</span> through targeted organic outreach, handling prospecting, copywriting, and relationship building</p>
+                            <p>Improved client visibility, rankings, and traffic through scalable SEO operations across nationwide law firms</p>
+                            <p>Adapted outreach strategy and link targets based on legal niche, region, and competitive landscape</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Marketing Intern -->
+                <div class="grid md:grid-cols-4 gap-8 border-b border-gray-200 pb-10">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="experience_logos/plus+on+black.jpg" alt="Positively Groundfish Logo" class="w-8 h-8 rounded object-cover">
+                            <div class="text-sm text-gray-400">Positively Groundfish (Nonprofit)</div>
+                        </div>
+                        <div class="text-sm text-gray-500">SEO Marketing Intern</div>
+                        <div class="text-sm text-gray-400">2023</div>
+                    </div>
+                    <div class="md:col-span-3">
+                        <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+                            <p>Supported digital growth for a sustainable fisheries nonprofit by leading SEO and content initiatives</p>
+                            <p>Created <span class="bg-yellow-200 px-1 rounded">10 long-form content pieces</span> and ran outreach campaigns that generated <span class="bg-yellow-200 px-1 rounded">50+ organic backlinks</span></p>
+                            <p>Increased site traffic by <span class="bg-yellow-200 px-1 rounded">176%</span> over the course of the campaign, helping the org reach more educators, policy makers, and ocean advocates</p>
+                            <p>Applied SEO strategy to <span class="bg-yellow-200 px-1 rounded">mission-driven storytelling</span> that resonates with environmental and conservation audiences</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Data Engineer Intern -->
+                <div class="grid md:grid-cols-4 gap-8 border-b border-gray-200 pb-10">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="experience_logos/pumpx-logo.png" alt="PumpX Logo" class="w-8 h-8 rounded object-cover">
+                            <div class="text-sm text-gray-400">PumpX Fitness LLC</div>
+                        </div>
+                        <div class="text-sm text-gray-500">Data Engineer</div>
+                        <div class="text-sm text-gray-400">Present</div>
+                    </div>
+                    <div class="md:col-span-3">
+                        <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+                            <p>Built and maintained <span class="bg-yellow-200 px-1 rounded">ETL pipelines</span> from MySQL databases to Pandas, visualized in Tableau</p>
+                            <p>Utilized <span class="bg-yellow-200 px-1 rounded">Apache Airflow</span> for workflow automation and pipeline management</p>
+                            <p>Ensured data integrity through robust cleaning and transformation processes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analyst Intern -->
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="experience_logos/dm_logo.png" alt="Dev/Mission Logo" class="w-8 h-8 rounded object-cover">
+                            <div class="text-sm text-gray-400">Dev/Mission</div>
+                        </div>
+                        <div class="text-sm text-gray-500">Data Analyst</div>
+                        <div class="text-sm text-gray-400">Jun – Aug 2023</div>
+                    </div>
+                    <div class="md:col-span-3">
+                        <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+                            <p>Analyzed data of <span class="bg-yellow-200 px-1 rounded">1700+ residents</span>, generating monthly reports with Seaborn visualizations</p>
+                            <p>Developed Python-based analytics tool for reporting and dynamic visualizations</p>
+                            <p>Saved <span class="bg-yellow-200 px-1 rounded">3 hours weekly</span> of senior management time through ETL pipeline automation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-12 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-5xl font-light mb-16 text-black">Education</h2>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Graduation Photo -->
+                <div class="flex justify-center">
+                    <img src="education_logos/graduation.jpg" alt="William Zhao Graduation" class="w-80 h-80 object-cover rounded-sm shadow-lg transform rotate-90">
+                </div>
+                
+                <!-- Education Content -->
+                <div class="md:col-span-2 space-y-8">
+
+                    <div class="space-y-8">
+                        <!-- High School -->
+                        <div>
+                            <div class="flex align-center gap-4 mb-4 flex-row">
+                                <img src="education_logos/gwhs.jpg" alt="GWHS Logo" class="w-12 h-12 rounded object-cover">
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-medium text-black">George Washington High School (2019-2023) - San Francisco</h3>
+                                    <p class="text-sm text-gray-400">(4.16 weighted GPA) High School Diploma</p>
+                                </div>
+                            </div>
+                            <h4 class="text-lg font-medium text-black mb-3">
+                                <span class="bg-yellow-200 px-1 rounded">Advanced Placement Courses</span>
+                            </h4>
+                            <div class="grid md:grid-cols-2 gap-2 text-base text-gray-600">
+                                <p>• AP Calculus AB</p>
+                                <p>• AP US History</p>
+                                <p>• AP Computer Science A</p>
+                                <p>• AP Computer Science Principles</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Dual Enrollment -->
+                        <div>
+                            <div class="flex align-center gap-4 mb-4 flex-row">
+                                <img src="education_logos/smccd.png" alt="SMCCD Logo" class="w-12 h-12 rounded object-cover">
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-medium text-black">San Meteo City College (2021-2023) - San Mateo</h3>
+                                    <p class="text-sm text-gray-400">4.0 GPA (Dual Enrollment)</p>
+                                </div>
+                            </div>
+                            <p class="text-base text-gray-600 mb-4"><span class="bg-yellow-200 px-1 rounded">10 college-level courses</span>:</p>
+                            <div class="space-y-1 text-base text-gray-600">
+                                <p>• CIS 501 - Data Structures and Algorithms (Python)</p>
+                                <p>• CIS 502 - Applied Python Programming</p>
+                                <p>• CIS 117 - Python Programming</p>
+                                <p>• CIS 118 - Intro to Computer Science</p>
+                                <p>• CIS 140 - Big Data Analytics</p>
+                                <p>• BUS 207 - Business Analytics</p>
+                                <p>• MATH 200 - Elementary Probability & Statistics</p>
+                                <p>• MATH 225 - Path To Calculus</p>
+                                <p>• CS 160A - Unix/Linux</p>
+                                <p>• PHOT 60A - Photoshop for Photographers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-12 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-5xl font-light mb-16 text-black">Resume</h2>
+            
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <!-- PDF Embed -->
+                <div class="relative" style="height: 800px;">
+                    <iframe 
+                        src="William_Zhao_Technical_Resume-33.pdf" 
+                        width="100%" 
+                        height="100%" 
+                        style="border: none;"
+                        title="William Zhao Resume">
+                    </iframe>
+                </div>
+                
+                <!-- Download Link -->
+                <div class="p-6 border-t border-gray-200 bg-gray-50">
+                    <div class="flex items-center justify-between">
+                        <p class="text-sm text-gray-600">
+                            Having trouble viewing? Download the PDF directly.
+                        </p>
+                        <a 
+                            href="William_Zhao_Technical_Resume-33.pdf" 
+                            download="William_Zhao_Resume.pdf"
+                            class="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded hover:bg-gray-800 transition-colors text-sm font-medium"
+                        >
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-5xl font-light mb-16 text-black">Contact</h2>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <p class="text-lg text-gray-700 mb-10 leading-relaxed">
+                        Based in San Francisco. I've spent the last couple years working, launching, failing, growing, and starting again. Now applying to study in Singapore to scale with structure and community.
+                    </p>
+                    <div class="space-y-6">
+                        <a href="mailto:wzhao67@ucsc.edu" class="block text-lg text-black border-b border-black pb-2 hover:text-gray-600 transition-colors w-fit">
+                            william@siteflowseo.com
+                        </a>
+                        <a href="tel:415-535-4199" class="block text-lg text-black border-b border-black pb-2 hover:text-gray-600 transition-colors w-fit">
+                            415-535-4199
+                        </a>
+                        <a href="William_Zhao_Technical_Resume-33.pdf" target="_blank" class="block text-lg text-black border-b border-black pb-2 hover:text-gray-600 transition-colors w-fit">
+                            Resume PDF
+                        </a>
+                        <a href="#" class="block text-lg text-black border-b border-black pb-2 hover:text-gray-600 transition-colors w-fit">
+                            Github
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500 mb-8">Whether it's marketing, data, or building tools — I like making things that people actually use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Smooth scrolling behavior -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Carousel functionality
+        function initCarousels() {
+            const carousels = document.querySelectorAll('[data-carousel]');
+            
+            carousels.forEach(carousel => {
+                const track = carousel.querySelector('.carousel-track');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const dots = carousel.parentElement.querySelectorAll('.carousel-dot');
+                const prevBtn = carousel.querySelector('.carousel-prev');
+                const nextBtn = carousel.querySelector('.carousel-next');
+                let currentSlide = 0;
+                const totalSlides = slides.length;
+                
+                function goToSlide(slideIndex) {
+                    currentSlide = slideIndex;
+                    const offset = -slideIndex * 100;
+                    track.style.transform = `translateX(${offset}%)`;
+                    
+                    // Update dots
+                    dots.forEach((dot, index) => {
+                        if (index === slideIndex) {
+                            dot.classList.add('active');
+                            dot.style.backgroundColor = '#374151'; // gray-700
+                        } else {
+                            dot.classList.remove('active');
+                            dot.style.backgroundColor = '#d1d5db'; // gray-300
+                        }
+                    });
+                }
+                
+                function nextSlide() {
+                    const next = (currentSlide + 1) % totalSlides;
+                    goToSlide(next);
+                }
+                
+                function prevSlide() {
+                    const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+                    goToSlide(prev);
+                }
+                
+                // Add click listeners to dots
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        goToSlide(index);
+                    });
+                });
+                
+                // Add click listeners to navigation buttons
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', prevSlide);
+                }
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', nextSlide);
+                }
+                
+                // Initialize first slide
+                goToSlide(0);
+            });
+        }
+        
+        // Initialize carousels when DOM loads
+        document.addEventListener('DOMContentLoaded', initCarousels);
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
