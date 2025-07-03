@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Experience - William Zhao</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans overflow-x-hidden">
+    
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <nav class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo/Name -->
+                <a href="index.html" class="text-2xl font-light text-black hover:text-gray-600 transition-colors">
+                    William Zhao
+                </a>
+                
+                <!-- Navigation Links -->
+                <div class="flex items-center gap-8">
+                    <a href="index.html" class="text-black hover:text-gray-600 transition-colors text-lg font-medium border-b border-transparent hover:border-gray-300">
+                        Home
+                    </a>
+                    <a href="life_experience.html" class="text-black border-b border-black pb-1 text-lg font-medium">
+                        My Life
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        <!-- Life Timeline Section -->
+        <section class="py-12 px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-5xl font-light mb-16 text-black">My Life (non-work)</h2>
+
+                <!-- Timeline Container -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+                    
+                    <!-- Timeline Events -->
+                    <div class="space-y-16">
+                        
+                        <!-- 2025 -->
+                        <div class="relative">
+                            <!-- Year Header -->
+                            <div class="relative flex items-start mb-8">
+                                <div class="absolute left-6 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="ml-20">
+                                    <h2 class="text-4xl font-light text-black">2025</h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Sub-events for 2025 -->
+                            <div class="ml-8 space-y-8">
+                                <!-- Solo Korea Trip -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Solo Traveling Korea Trip</h3>
+                                            <span class="text-sm text-gray-400">Late 2025</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Embarked on a solo traveling trip to Korea for medical reasons.
+                                        </p>
+                                        <div class="flex gap-2 mb-4">
+                                            <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs">Solo Travel</span>
+                                            <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs">Korea</span>
+                                            <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs">Adventure</span>
+                                        </div>
+                                        <div class="bg-gray-100 w-full h-60 rounded-lg flex items-center justify-center text-gray-400">
+                                            [Korea Travel Photos]
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Dropped Out -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-gray-600 rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Dropped Out of UC Santa Cruz</h3>
+                                            <span class="text-sm text-gray-400">Early 2025</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Made the decision to drop out of UC Santa Cruz.
+                                        </p>
+
+                                        <img src="timeline/dropout.jpg" alt="Dropped Out Photos" class="w-full h-60 object-cover rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2024 -->
+                        <div class="relative">
+                            <!-- Year Header -->
+                            <div class="relative flex items-start mb-8">
+                                <div class="absolute left-6 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="ml-20">
+                                    <h2 class="text-4xl font-light text-black">2024</h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Sub-events for 2024 -->
+                            <div class="ml-8 space-y-8">
+
+                                <!-- Kickboxing -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-green-500 rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Kickboxing</h3>
+                                            <span class="text-sm text-gray-400">2024</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Started kickboxing.
+                                        </p>
+
+                                        <video 
+                                            class="w-full h-96 object-cover" 
+                                            autoplay 
+                                            muted 
+                                            loop 
+                                            
+                                            poster="https://ik.imagekit.io/lru6xq87x/IMG_6548 2.MOV/ik-video.mp4?updatedAt=1751515910529%2C1751515910529">
+                                            <source src="https://ik.imagekit.io/lru6xq87x/IMG_6548 2.MOV/ik-video.mp4?updatedAt=1751515910529%2C1751515910529" type="video/mp4">
+                                            <div class="bg-gray-100 h-96 flex items-center justify-center text-gray-400 text-sm">
+                                                [Video not supported - ResuEdge Demo]
+                                            </div>
+                                        </video>
+
+                                    </div>
+                                </div>
+
+                                <!-- Benched 225 -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-green-500 rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Benched 225</h3>
+                                            <span class="text-sm text-gray-400">2024</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Achieved a major fitness milestone by benching 225 pounds.
+                                        </p>
+                                        <div class="flex gap-2 mb-4">
+                                            <span class="bg-green-500 text-white px-2 py-1 rounded text-xs">Fitness</span>
+                                            <span class="bg-green-500 text-white px-2 py-1 rounded text-xs">Milestone</span>
+                                            <span class="bg-green-500 text-white px-2 py-1 rounded text-xs">Strength</span>
+                                        </div>
+                                        <video 
+                                            class="w-full h-96 object-cover" 
+                                            autoplay 
+                                            muted 
+                                            loop 
+                                            
+                                            poster="https://ik.imagekit.io/lru6xq87x/202403101826.MP4?updatedAt=1751515906568%2C1751515906568">
+                                            <source src="https://ik.imagekit.io/lru6xq87x/202403101826.MP4?updatedAt=1751515906568%2C1751515906568" type="video/mp4">
+                                            <div class="bg-gray-100 h-96 flex items-center justify-center text-gray-400 text-sm">
+                                                [Video not supported - ResuEdge Demo]
+                                            </div>
+                                        </video>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2023 -->
+                        <div class="relative">
+                            <!-- Year Header -->
+                            <div class="relative flex items-start mb-8">
+                                <div class="absolute left-6 w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="ml-20">
+                                    <h2 class="text-4xl font-light text-black">2023</h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Sub-events for 2023 -->
+                            <div class="ml-8 space-y-8">
+                                <!-- UC Santa Cruz -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-black rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Started UC Santa Cruz</h3>
+                                            <span class="text-sm text-gray-400">Fall 2023</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Started attending UC Santa Cruz.
+                                        </p>
+                                        <img src="timeline/dining_hall.jpg" alt="Dropped Out Photos" class="w-full h-60 object-cover rounded-lg">
+                                    </div>
+                                </div>
+
+                                <!-- High School Graduation -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-black rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Graduated High School</h3>
+                                            <span class="text-sm text-gray-400">Spring 2023</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Graduated from George Washington High School.
+                                        </p>
+
+                                        <img src="timeline/gwhs.jpg" alt="Graduation Photos" class="w-full h-60 object-cover rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2022 -->
+                        <div class="relative">
+                            <!-- Year Header -->
+                            <div class="relative flex items-start mb-8">
+                                <div class="absolute left-6 w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="ml-20">
+                                    <h2 class="text-4xl font-light text-black">2022</h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Sub-events for 2022 -->
+                            <div class="ml-8 space-y-8">
+                                <!-- Started Working Out -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-black rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Started Working Out in the Gym</h3>
+                                            <span class="text-sm text-gray-400">2022</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Began my fitness journey by working out in the gym.
+                                        </p>
+                                        <div class="flex gap-2 mb-4">
+                                            <span class="bg-black text-white px-2 py-1 rounded text-xs">Fitness</span>
+                                            <span class="bg-black text-white px-2 py-1 rounded text-xs">Gym</span>
+                                            <span class="bg-black text-white px-2 py-1 rounded text-xs">New Hobby</span>
+                                        </div>
+
+
+                                        <video 
+                                            class="w-full h-96 object-cover" 
+                                            autoplay 
+                                            muted 
+                                            loop 
+                                            
+                                            poster="https://ik.imagekit.io/lru6xq87x/IMG_5592.mov/ik-video.mp4?updatedAt=1751515971290%2C1751515971290">
+                                            <source src="https://ik.imagekit.io/lru6xq87x/IMG_5592.mov/ik-video.mp4?updatedAt=1751515971290%2C1751515971290" type="video/mp4">
+                                            <div class="bg-gray-100 h-96 flex items-center justify-center text-gray-400 text-sm">
+                                                [Video not supported - ResuEdge Demo]
+                                            </div>
+                                        </video>
+
+                                        
+                                  
+                                    </div>
+                                </div>
+
+                                <!-- Cross Country -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-black rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Cross Country</h3>
+                                            <span class="text-sm text-gray-400">2022</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Participated in cross country activities.
+                                        </p>
+        
+                                        <img src="timeline/xc.PNG" alt="Cross Country Photos" class="w-full h-60 object-cover rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2019 -->
+                        <div class="relative">
+                            <!-- Year Header -->
+                            <div class="relative flex items-start mb-8">
+                                <div class="absolute left-6 w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="ml-20">
+                                    <h2 class="text-4xl font-light text-black">2019</h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Sub-events for 2019 -->
+                            <div class="ml-8 space-y-8">
+                                <!-- Started High School -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-black rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Started High School</h3>
+                                            <span class="text-sm text-gray-400">Fall 2019</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Started high school at George Washington High School in San Francisco.
+                                        </p>
+    
+                                        <img src="timeline/IMG_5181.jpg" alt="George Washington High School Photos" class="w-full h-60 object-cover rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2015 -->
+                        <div class="relative">
+                            <!-- Year Header -->
+                            <div class="relative flex items-start mb-8">
+                                <div class="absolute left-6 w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="ml-20">
+                                    <h2 class="text-4xl font-light text-black">2015</h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Sub-events for 2015 -->
+                            <div class="ml-8 space-y-8">
+                                <!-- Started Middle School -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-black rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Started Middle School</h3>
+                                            <span class="text-sm text-gray-400">Fall 2015</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Started middle school at A.P. Giannini Middle School in San Francisco.
+                                        </p>
+               
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2010 -->
+                        <div class="relative">
+                            <!-- Year Header -->
+                            <div class="relative flex items-start mb-8">
+                                <div class="absolute left-6 w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="ml-20">
+                                    <h2 class="text-4xl font-light text-black">2010</h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Sub-events for 2010 -->
+                            <div class="ml-8 space-y-8">
+                                <!-- Started Elementary School -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-black rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Started Elementary School</h3>
+                                            <span class="text-sm text-gray-400">Fall 2010</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Started elementary school at age 5.
+                                        </p>
+      
+                                        <img src="timeline/el.JPG" alt="Elementary School Photos" class="w-full h-60 object-cover rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2005 -->
+                        <div class="relative">
+                            <!-- Year Header -->
+                            <div class="relative flex items-start mb-8">
+                                <div class="absolute left-6 w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg"></div>
+                                <div class="ml-20">
+                                    <h2 class="text-4xl font-light text-black">2005</h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Sub-events for 2005 -->
+                            <div class="ml-8 space-y-8">
+                                <!-- Born -->
+                                <div class="relative flex items-start">
+                                    <div class="absolute left-6 w-3 h-3 bg-black rounded-full border-2 border-white shadow"></div>
+                                    <div class="ml-16">
+                                        <div class="flex items-center gap-3 mb-3">
+                                            <h3 class="text-xl font-light text-black">Born</h3>
+                                            <span class="text-sm text-gray-400">2005</span>
+                                        </div>
+                                        <p class="text-base text-gray-700 mb-4 leading-relaxed">
+                                            Born in 2005.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

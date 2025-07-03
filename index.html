@@ -21,8 +21,30 @@
 </head>
 <body class="bg-white text-gray-900 font-sans overflow-x-hidden">
     
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <nav class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo/Name -->
+                <a href="index.html" class="text-2xl font-light text-black hover:text-gray-600 transition-colors">
+                    William Zhao
+                </a>
+                
+                <!-- Navigation Links -->
+                <div class="flex items-center gap-8">
+                    <a href="index.html" class="text-black border-b border-black pb-1 text-lg font-medium">
+                        Home
+                    </a>
+                    <a href="life_experience.html" class="text-black hover:text-gray-600 transition-colors text-lg font-medium border-b border-transparent hover:border-gray-300">
+                        My Life
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center px-6 py-12">
+    <section class="min-h-screen flex items-center justify-center px-6 py-12 pt-24">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="flex justify-center md:justify-end">
@@ -176,7 +198,7 @@
                                     <div class="space-y-2 text-sm text-gray-500 mb-8">
                                         <p><span class="bg-black text-white px-2 py-1 rounded font-medium text-xs uppercase tracking-wide">In development</span></p>
                                         <p><span class="bg-black text-white px-2 py-1 rounded font-medium text-xs uppercase tracking-wide">$30K backing</span></p>
-                                        <p><a href="https://www.coryzue.com/" target="_blank" class="text-black hover:text-gray-600 transition-colors border-b border-gray-300 hover:border-gray-500 inline-flex items-center gap-1">Cory Zue <i data-lucide="external-link" class="w-3 h-3"></i></a> (advisor)</p>
+                                        <p><a href="https://www.coryzue.com/" target="_blank" class="text-black hover:text-gray-600 transition-colors border-b border-gray-300 hover:border-gray-500 inline-flex items-center gap-1">Cory Zue <i data-lucide="external-link" class="w-3 h-3"></i></a> (advisor, MIT & Former CTO @ Dimagi)</p>
                                     </div>
                                     <div class="space-y-3">
                                         <h4 class="text-sm text-gray-500 uppercase tracking-wide">Social</h4>
@@ -245,6 +267,26 @@
             <h2 class="text-5xl font-light mb-16 text-black">Experience</h2>
             
             <div class="space-y-12">
+                <!-- Machine Translation Research Assistant -->
+                <div class="grid md:grid-cols-4 gap-8 border-b border-gray-200 pb-10">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3 mb-2">
+                            <img src="experience_logos/thi.png" alt="Research Logo" class="w-8 h-8 rounded object-cover">
+                            <div class="text-sm text-gray-400">University Research Lab</div>
+                        </div>
+                        <div class="text-sm text-gray-500">Machine Translation Research Assistant</div>
+                        <div class="text-sm text-gray-400">2023-2024</div>
+                    </div>
+                    <div class="md:col-span-3">
+                        <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+                            <p>Conducted research on <span class="bg-yellow-200 px-1 rounded">neural machine translation models</span> under faculty supervision</p>
+                            <p>Preprocessed and analyzed <span class="bg-yellow-200 px-1 rounded">multilingual datasets</span> containing 100K+ translation pairs</p>
+                            <p>Implemented transformer-based models using <span class="bg-yellow-200 px-1 rounded">PyTorch and Hugging Face</span> for language translation tasks</p>
+                            <p>Evaluated model performance using BLEU scores and contributed to research publications on cross-lingual transfer learning</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- SEO Analyst & Specialist -->
                 <div class="grid md:grid-cols-4 gap-8 border-b border-gray-200 pb-10">
                     <div class="space-y-2">
@@ -277,7 +319,7 @@
                     </div>
                     <div class="md:col-span-3">
                         <div class="space-y-3 text-base text-gray-600 leading-relaxed">
-                            <p>Supported <span class="bg-yellow-200 px-1 rounded">17 client accounts</span> at the <span class="bg-yellow-200 px-1 rounded">U.S.'s largest legal SEO agency</span>, specializing in attorney marketing</p>
+                            <p>Supported the <span class="bg-yellow-200 px-1 rounded">U.S.'s largest legal SEO agency</span>, specializing in attorney marketing</p>
                             <p>Drove <span class="bg-yellow-200 px-1 rounded">500+ backlinks</span> through targeted organic outreach, handling prospecting, copywriting, and relationship building</p>
                             <p>Improved client visibility, rankings, and traffic through scalable SEO operations across nationwide law firms</p>
                             <p>Adapted outreach strategy and link targets based on legal niche, region, and competitive landscape</p>
