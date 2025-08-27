@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Athos – UX Designer Portfolio (Tailwind Scroll Stack + Peek)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&family=Lustria&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+        serif: ['Lustria', 'ui-serif', 'Georgia', 'serif']
+      },
+      extend: {
+        colors: { ink: '#1E1515' },
+        boxShadow: { card: '0 -1px 0 0 rgba(47,43,67,.10) inset, 0 1px 3px 0 rgba(47,43,67,.10)' }
+      }
+    }
+  }
+</script>
+<style>
+  .will-change-transform { will-change: transform; }
+
+  /* --- Peek mechanics --- */
+  #stack { --peek: 120px; }
+  .stack-card { 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px) scale(0.9);
+    height: 60vh;
+    max-height: 500px;
+    width: 100%;
+    max-width: min(1016px, 92vw);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    will-change: transform, opacity;
+    pointer-events: none;
+  }
+  
+  .stack-card.visible {
+    opacity: 0.9;
+    pointer-events: auto;
+  }
+  
+  .stack-card:nth-child(1).visible { 
+    transform: translateX(-50%) translateY(90px) scale(0.9);
+    z-index: 10;
+    opacity: 0.9;
+  }
+  .stack-card:nth-child(2).visible { 
+    transform: translateX(-50%) translateY(60px) scale(0.95);
+    z-index: 20;
+  }
+  .stack-card:nth-child(3).visible { 
+    transform: translateX(-50%) translateY(30px) scale(1);
+    z-index: 30;
+  }
+  
+  .stack-container {
+    height: 255vh; /* 3 * 85vh for smooth scrolling */
+  }
+  
+  .stack-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cards-wrapper {
+    position: relative;
+    height: 60vh;
+    max-height: 500px;
+    width: 100%;
+    max-width: min(1016px, 92vw);
+  }
+
+  /* Tiny metrics / skills */
+  .tiny-metric-label { font-size:10px; line-height:1; color:rgba(0,0,0,.6); }
+  .tiny-metric-value { font-size:12px; line-height:1.1; font-weight:700; color:rgba(0,0,0,.82); }
+
+  /* Optional subtle grain over hero */
+  .grain::after{
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.06;
+    background-image:url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'>\
+        <filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter>\
+        <rect width='100%' height='100%' filter='url(#n)' opacity='0.6'/>\
+      </svg>");
+    mix-blend-mode:soft-light;
+  }
+</style>
+</head>
+<body class="bg-white text-ink antialiased">
+
+
+<!-- Header -->
+<header class="sticky top-2 z-50">
+  <div class="mx-auto mt-2 w-[min(1016px,92vw)] backdrop-blur bg-white/75 border border-black/5 rounded-xl shadow-card flex items-center justify-between px-3.5 py-2.5">
+    <a class="flex items-center gap-2" href="#">
+      <img class="w-6 h-6 rounded-full object-cover" src="https://framerusercontent.com/images/3dpALmvrIR88qPmbDlYoTyJSig.png" alt="">
+      <span class="font-bold">Nicey</span>
+    </a>
+    <nav class="flex items-center gap-3">
+      <a class="px-2 py-1.5 rounded-md hover:bg-black/5" href="#case-study">Work</a>
+      <a class="px-2 py-1.5 rounded-md hover:bg-black/5" href="#experience">Experience</a>
+      <a class="px-2 py-1.5 rounded-md hover:bg-black/5" href="#blog">Blog</a>
+      <a class="px-2 py-1.5 rounded-md hover:bg-black/5" href="#faq">FAQ</a>
+      <a class="inline-flex items-center justify-center rounded-full bg-white shadow-card px-4 py-2 font-medium" href="https://contra.com/babarogic" target="_blank" rel="noopener">Start a Project</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero (Canvas blob + small circular profile) -->
+<section class="relative">
+  <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(100%_90%_at_50%_0%,rgba(0,0,0,.05)_0%,transparent_60%)]"></div>
+  <div class="mx-auto w-[min(1016px,92vw)] pt-12 pb-6">
+    <div class="relative min-h-[420px] overflow-hidden rounded-2xl grain">
+      <!-- Animated canvas lives inside the hero container -->
+      <canvas id="blobCanvas" class="absolute inset-0 w-full h-full"></canvas>
+
+      <!-- Foreground content -->
+      <div class="relative z-10 flex flex-col items-center text-center p-10">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
+               alt="Profile"
+               class="h-14 w-14 rounded-full object-cover ring-4 ring-white/80 shadow" />
+          <span class="inline-flex items-center gap-2 bg-white/90 border border-black/10 px-3 py-1.5 rounded-lg font-semibold text-xs">
+            <svg viewBox="0 0 14 18" class="w-[14px] h-[18px]" aria-hidden="true"><path d="M.916.029h12.168v5.897H7zM.916 5.926H7l6.084 5.898H.916zM.916 11.824H7v5.898z" fill="#000"/></svg>
+            Verified Expert
+          </span>
+        </div>
+
+        <h1 class="font-serif text-[clamp(36px,5vw,56px)] leading-tight bg-[radial-gradient(77%_206%_at_20.8%_36.5%,rgba(0,0,0,.88)_0%,rgba(0,0,0,.51)_100%)] bg-clip-text text-transparent mb-2">
+          Your Design Partner
+        </h1>
+        <p class="text-black/75 max-w-[640px] mb-4">Over a decade of experience in building exceptional websites and digital products</p>
+
+        <div class="flex flex-wrap justify-center gap-3">
+          <a class="inline-flex rounded-full bg-gradient-to-b from-[#271B1B] to-[#1E1515] text-white font-semibold px-6 py-3" href="https://framer.link/MLiv5qU" target="_blank" rel="noopener">Use this Template</a>
+          <a class="inline-flex rounded-full border border-black/15 bg-white/60 shadow-card text-black/75 px-5 py-3" href="https://contra.com/babarogic" target="_blank" rel="noopener">Get Athos Plus</a>
+        </div>
+
+        <!-- Tiny tools/skills -->
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="rounded-full border border-neutral-200 bg-white/80 px-2.5 py-1 text-[10px] tracking-wide">Framer</span>
+          <span class="rounded-full border border-neutral-200 bg-white/80 px-2.5 py-1 text-[10px] tracking-wide">Figma</span>
+          <span class="rounded-full border border-neutral-200 bg-white/80 px-2.5 py-1 text-[10px] tracking-wide">Tailwind</span>
+          <span class="rounded-full border border-neutral-200 bg-white/80 px-2.5 py-1 text-[10px] tracking-wide">Accessibility</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scroll-Stack Case Studies -->
+<section id="case-study" class="relative">
+  <div class="stack-container">
+    <div class="stack-sticky">
+      <div class="mx-auto w-[min(1016px,92vw)]">
+        <div id="stack" class="cards-wrapper">
+          <!-- Card 1 -->
+          <article class="card stack-card rounded-[28px] bg-[#DFEFD7] p-6 shadow-xl overflow-hidden">
+            <div class="grid md:grid-cols-2 gap-6 h-full">
+              <div class="flex flex-col">
+                <h3 class="text-2xl font-bold mb-2">Budget Planner Finance App</h3>
+                <p class="text-black/60 mb-4">An intuitive interface for effortless financial management with a touch of gamification.</p>
+                <a class="inline-flex w-max rounded-full bg-gradient-to-b from-[#271B1B] to-[#1E1515] text-white px-4 py-2 shadow-card">View case study</a>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                  <div><div class="tiny-metric-label">Engagement</div><div class="tiny-metric-value">12 min</div></div>
+                  <div><div class="tiny-metric-label">User Satisfaction</div><div class="tiny-metric-value">4.5★</div></div>
+                </div>
+              </div>
+              <div class="rounded-lg overflow-hidden">
+                <img class="w-full h-full object-cover" src="https://framerusercontent.com/images/KHgIfpCUTM3SEAMCBkivLyl9oE.jpg" alt="">
+              </div>
+            </div>
+          </article>
+          
+          <!-- Card 2 -->
+          <article class="card stack-card rounded-[28px] bg-[#FFF4E6] p-6 shadow-xl overflow-hidden">
+            <div class="grid md:grid-cols-2 gap-6 h-full">
+              <div class="flex flex-col">
+                <h3 class="text-2xl font-bold mb-2">Senior Full Stack Developer</h3>
+                <p class="text-black/60 mb-4">Leading development teams and architecting scalable solutions with focus on microservices and cloud infrastructure.</p>
+                <a class="inline-flex w-max rounded-full bg-gradient-to-b from-[#271B1B] to-[#1E1515] text-white px-4 py-2 shadow-card">View experience</a>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                  <div><div class="tiny-metric-label">Experience</div><div class="tiny-metric-value">6+ Years</div></div>
+                  <div><div class="tiny-metric-label">Team Size</div><div class="tiny-metric-value">8 Members</div></div>
+                </div>
+              </div>
+              <div class="rounded-lg overflow-hidden">
+                <img class="w-full h-full object-cover" src="https://framerusercontent.com/images/KHgIfpCUTM3SEAMCBkivLyl9oE.jpg" alt="">
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card stack-card rounded-[28px] bg-[#F0F9FF] p-6 shadow-xl overflow-hidden">
+            <div class="grid md:grid-cols-2 gap-6 h-full">
+              <div class="flex flex-col">
+                <h3 class="text-2xl font-bold mb-2">Technical Skills & Expertise</h3>
+                <p class="text-black/60 mb-4">Comprehensive full-stack development skills with modern frameworks, cloud technologies, and DevOps practices.</p>
+                <a class="inline-flex w-max rounded-full bg-gradient-to-b from-[#271B1B] to-[#1E1515] text-white px-4 py-2 shadow-card">View skills</a>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                  <div><div class="tiny-metric-label">Technologies</div><div class="tiny-metric-value">20+</div></div>
+                  <div><div class="tiny-metric-label">Certifications</div><div class="tiny-metric-value">5 AWS</div></div>
+                </div>
+              </div>
+              <div class="rounded-lg overflow-hidden">
+                <img class="w-full h-full object-cover" src="https://framerusercontent.com/images/KHgIfpCUTM3SEAMCBkivLyl9oE.jpg" alt="">
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer trimmed for brevity -->
+<footer class="mt-14 bg-black text-white py-14 text-center">
+  <p>Nicey © 2023. Designed by Goran Babarogic</p>
+</footer>
+
+<script>
+  // === Smooth Card Stack Animation ===
+  (function(){
+    const section = document.querySelector('#case-study .stack-container');
+    const cards = Array.from(document.querySelectorAll('#stack .stack-card'));
+    let ticking = false;
+    let activeCardIndex = 0;
+    
+    function updateCardStack() {
+      if (!section) return;
+      
+      const sectionRect = section.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const sectionTop = sectionRect.top;
+      const sectionHeight = section.offsetHeight;
+      const scrollableDistance = sectionHeight - viewportHeight;
+      
+      let progress = 0;
+      if (sectionTop <= 0 && Math.abs(sectionTop) <= scrollableDistance) {
+        progress = Math.abs(sectionTop) / scrollableDistance;
+      } else if (sectionTop <= 0) {
+        progress = 1;
+      }
+      
+      const cardCount = cards.length;
+      const progressPerCard = 1 / cardCount;
+      let newActiveIndex = 0;
+      
+      for (let i = 0; i < cardCount; i++) {
+        if (progress >= progressPerCard * (i + 1)) {
+          newActiveIndex = i + 1;
+        }
+      }
+      
+      activeCardIndex = Math.min(newActiveIndex, cardCount - 1);
+      
+      // Update card visibility and transforms
+      cards.forEach((card, index) => {
+        const isVisible = activeCardIndex >= index;
+        if (isVisible) {
+          card.classList.add('visible');
+        } else {
+          card.classList.remove('visible');
+        }
+      });
+    }
+    
+    function handleScroll() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateCardStack();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    updateCardStack(); // Initial call
+  })();
+
+  // === Canvas Blob Animation ===
+  (function(){
+    const canvas = document.getElementById('blobCanvas');
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d',{alpha:true});
+    const container = canvas.parentElement;
+    let dpr=window.devicePixelRatio||1, W=0,H=0;
+    const BLOBS=[]; const COLOR=[250,229,209]; // #fae5d1
+    function rand(a,b){return a+Math.random()*(b-a);}
+    function resize(){
+      const r=container.getBoundingClientRect();
+      W=r.width; H=r.height;
+      canvas.width=W*dpr; canvas.height=H*dpr;
+      canvas.style.width=W+'px'; canvas.style.height=H+'px';
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+    function initBlobs(){
+      BLOBS.length=0;
+      for(let i=0;i<5;i++){
+        BLOBS.push({x:rand(0,W),y:rand(0,H),vx:rand(-0.1,0.1),vy:rand(-0.08,0.08),r:rand(140,240),color:COLOR});
+      }
+    }
+    function drawBlob(b){
+      const g=ctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r);
+      g.addColorStop(0,`rgba(${b.color[0]},${b.color[1]},${b.color[2]},0.35)`);
+      g.addColorStop(1,`rgba(${b.color[0]},${b.color[1]},${b.color[2]},0)`);
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(b.x,b.y,b.r,0,2*Math.PI); ctx.fill();
+    }
+    let last=0;
+    function frame(t){
+      const dt=t-last||16; last=t;
+      ctx.clearRect(0,0,W,H); ctx.globalCompositeOperation='lighter';
+      for(const b of BLOBS){
+        b.x+=b.vx*dt; b.y+=b.vy*dt;
+        if(b.x<-b.r||b.x>W+b.r) b.vx*=-1;
+        if(b.y<-b.r||b.y>H+b.r) b.vy*=-1;
+        drawBlob(b);
+      }
+      requestAnimationFrame(frame);
+    }
+    resize(); initBlobs(); frame(0);
+    window.addEventListener('resize',()=>{resize();initBlobs();});
+  })();
+</script>
+</body>
+</html>
